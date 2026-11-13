@@ -1,4 +1,4 @@
-name: Checkout
+name: Checkout Example
 on:
   push:
     branches:
@@ -8,8 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout
-    uses: actions/checkout@v7.0.1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    
+      - name: verification
+        run: ls -alhR
